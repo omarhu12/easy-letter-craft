@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { FileText, Mail, MessageSquare, Phone } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-white py-16">
+  return <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
@@ -12,7 +9,7 @@ const Footer = () => {
               <div className="bg-blue-600 w-10 h-10 rounded-lg flex items-center justify-center">
                 <FileText className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold">LetterCraft</span>
+              <span className="text-2xl font-bold">Letterbet</span>
             </div>
             
             <p className="text-gray-300 text-lg leading-relaxed mb-6 max-w-md">
@@ -54,11 +51,9 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 LetterCraft. All rights reserved. Making official letters accessible to everyone.</p>
+          <p>© 2024 Letterbet. All rights reserved for Boulevardetrading. Making official letters accessible to everyone.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

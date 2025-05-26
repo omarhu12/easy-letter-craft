@@ -30,7 +30,7 @@ const HeroSection = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 
-                <Button variant="outline" size="lg" className="border-white/30 hover:bg-white/10 text-lg px-8 py-6 rounded-xl font-semibold transition-all duration-300 text-slate-950">
+                <Button variant="outline" size="lg" className="border-white/30 text-lg px-8 py-6 rounded-xl font-semibold transition-all duration-300 text-slate-950 bg-slate-100">
                   View Templates
                 </Button>
               </div>
