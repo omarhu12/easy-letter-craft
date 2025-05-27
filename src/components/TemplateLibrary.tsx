@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FileText, Users, GraduationCap, Building, Scale, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TemplateLibrary = () => {
   const categories = [
@@ -14,7 +15,8 @@ const TemplateLibrary = () => {
       count: "120+ templates",
       color: "bg-blue-600",
       bgColor: "bg-blue-50",
-      templates: ["Court Appeal", "Legal Complaint", "Bail Request", "Evidence Submission"]
+      templates: ["Court Appeal", "Legal Complaint", "Bail Request", "Evidence Submission"],
+      link: "/templates/legal"
     },
     {
       icon: Building,
@@ -23,7 +25,8 @@ const TemplateLibrary = () => {
       count: "80+ templates",
       color: "bg-green-600",
       bgColor: "bg-green-50",
-      templates: ["Tax Exemption", "License Application", "Ministry Appeal", "Document Request"]
+      templates: ["Tax Exemption", "License Application", "Ministry Appeal", "Document Request"],
+      link: "/templates/government"
     },
     {
       icon: GraduationCap,
@@ -32,7 +35,8 @@ const TemplateLibrary = () => {
       count: "90+ templates",
       color: "bg-purple-600",
       bgColor: "bg-purple-50",
-      templates: ["Admission Request", "Grade Appeal", "Transfer Letter", "Scholarship Application"]
+      templates: ["Admission Request", "Grade Appeal", "Transfer Letter", "Scholarship Application"],
+      link: "/templates/education"
     },
     {
       icon: Users,
@@ -41,7 +45,8 @@ const TemplateLibrary = () => {
       count: "75+ templates",
       color: "bg-orange-600",
       bgColor: "bg-orange-50",
-      templates: ["Permit Request", "Service Complaint", "Property Appeal", "Utility Request"]
+      templates: ["Permit Request", "Service Complaint", "Property Appeal", "Utility Request"],
+      link: "/templates/municipal"
     },
     {
       icon: Heart,
@@ -50,7 +55,8 @@ const TemplateLibrary = () => {
       count: "65+ templates",
       color: "bg-red-600",
       bgColor: "bg-red-50",
-      templates: ["Insurance Claim", "Medical Leave", "Treatment Request", "Disability Appeal"]
+      templates: ["Insurance Claim", "Medical Leave", "Treatment Request", "Disability Appeal"],
+      link: "/templates/healthcare"
     },
     {
       icon: FileText,
@@ -59,7 +65,8 @@ const TemplateLibrary = () => {
       count: "70+ templates",
       color: "bg-indigo-600",
       bgColor: "bg-indigo-50",
-      templates: ["Formal Complaint", "Request Letter", "Authorization", "Recommendation"]
+      templates: ["Formal Complaint", "Request Letter", "Authorization", "Recommendation"],
+      link: "/templates/business"
     }
   ];
 
@@ -106,9 +113,11 @@ const TemplateLibrary = () => {
                   </div>
                 ))}
               </div>
-              <Button variant="outline" className="w-full group-hover:bg-white/50 transition-colors">
-                View Templates
-              </Button>
+              <Link to={category.link}>
+                <Button variant="outline" className="w-full group-hover:bg-white/50 transition-colors">
+                  View Templates
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         ))}
